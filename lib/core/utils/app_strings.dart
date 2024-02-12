@@ -4,6 +4,8 @@ abstract class AppStrings {
   static const String appName = "Dalel",
   //!On Boarding Strings
       skip = "Skip",
+      explore = "Explore The history with Dalel in a smart way",
+      using = "Using our app’s history libraries you can find many historical periods ",
       next = "Next",
       createAccount = "Create Account",
       loginNow = "Login Now",
