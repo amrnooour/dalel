@@ -7,4 +7,6 @@ abstract class AppAssets{
   static const String success = "assets/images/Success.png";
   static const String vector1 = "assets/images/Vector1.svg";
   static const String vector2 = "assets/images/Vector2.svg";
+  static const String splash = "assets/images/Dalel-Splash.png";
+
 }
