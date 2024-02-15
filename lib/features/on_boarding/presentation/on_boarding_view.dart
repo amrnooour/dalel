@@ -31,7 +31,7 @@ class _OnBoardingState extends State<OnBoarding> {
               const SizedBox(height: 40,),
               CustomNavBar(onTap: (){
                 onBoardingVisited();
-                customReplacementNavigate(context, "/signin");
+                customReplacementNavigate(context, "/signup");
               },),
               OnBoardingWidgetBody(controller: _controller,onPageChanged: (index){
                 currentIndex =index;

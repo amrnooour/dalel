@@ -18,7 +18,7 @@ class _SplashState extends State<Splash> {
     super.initState();
     bool isOnBoardingVisited = getIt<CacheHelper>().getData(key: "IsOnBoardingVisited")?? false;
     if(isOnBoardingVisited==true){
-      delayedNavigate("/signin");
+      delayedNavigate("/signup");
     }else{
       delayedNavigate("/onBoardingRoute");
     }
