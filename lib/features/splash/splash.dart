@@ -2,6 +2,7 @@ import 'package:dalel/core/database/cashe_helper.dart';
 import 'package:dalel/core/functions/navigation.dart';
 import 'package:dalel/core/services/service_locator.dart';
 import 'package:dalel/core/utils/app_assets.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -18,7 +19,7 @@ class _SplashState extends State<Splash> {
     super.initState();
     bool isOnBoardingVisited = getIt<CacheHelper>().getData(key: "IsOnBoardingVisited")?? false;
     if(isOnBoardingVisited==true){
-      delayedNavigate("/signup");
+      FirebaseAuth.instance.currentUser == null ? delayedNavigate("/signup") :delayedNavigate("/home") ;
     }else{
       delayedNavigate("/onBoardingRoute");
     }

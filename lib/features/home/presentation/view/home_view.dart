@@ -1,16 +1,18 @@
 import 'package:dalel/core/functions/navigation.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-class SignInView extends StatelessWidget {
-  const SignInView({Key? key}) : super(key: key);
+class HomeView extends StatelessWidget {
+  const HomeView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(actions: [IconButton(onPressed: (){
-       customNavigation(context, "/signup");
+        FirebaseAuth.instance.signOut();
+        customReplacementNavigate(context, "/signin");
       }, icon: Icon(Icons.logout))],),
-      body: Center(child: Text("sign in"),),
+      body: Center(child: Text("Home"),),
     );
   }
 }

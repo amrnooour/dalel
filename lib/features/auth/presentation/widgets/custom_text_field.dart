@@ -6,7 +6,10 @@ class CustomTextField extends StatelessWidget {
   String labelText;
   bool obscureText;
   Widget? suffixIcon;
-  CustomTextField({Key? key,required this.labelText,this.obscureText = false,this.suffixIcon}) : super(key: key);
+  void Function(String)? onChanged;
+  void Function(String)? onFieldSubmitted;
+  CustomTextField({Key? key,required this.labelText,this.obscureText = false,this.suffixIcon,
+    this.onChanged,this.onFieldSubmitted,}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +25,15 @@ class CustomTextField extends StatelessWidget {
           suffixIcon: suffixIcon,
         ),
         obscureText: obscureText,
+        onChanged: onChanged,
+        onFieldSubmitted: onFieldSubmitted,
+        validator: (value){
+          if(value!.isEmpty){
+            return "this field required";
+          }else{
+            return null;
+          }
+        },
       ),
     );
   }
