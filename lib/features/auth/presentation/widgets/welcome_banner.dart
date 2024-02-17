@@ -17,7 +17,6 @@ class WelcomeBanner extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           Text(AppStrings.appName,style : CustomTextStyles.saira700style32,),
-          SizedBox(height: 18,),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.end,

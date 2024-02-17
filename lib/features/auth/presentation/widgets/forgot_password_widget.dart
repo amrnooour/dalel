@@ -3,14 +3,14 @@ import 'package:dalel/core/utils/app_strings.dart';
 import 'package:dalel/core/utils/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
-class ForgotPassword extends StatelessWidget {
-  const ForgotPassword({Key? key}) : super(key: key);
+class ForgotPasswordWidget extends StatelessWidget {
+  const ForgotPasswordWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        customReplacementNavigate(context, "");
+        customReplacementNavigate(context,"/forgotPassword");
       },
       child: Align(
           alignment: Alignment.centerRight,

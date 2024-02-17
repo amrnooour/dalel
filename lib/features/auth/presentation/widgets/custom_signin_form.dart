@@ -1,10 +1,9 @@
 import 'package:dalel/features/auth/presentation/auth_cubit/auth_cubit.dart';
 import 'package:dalel/features/auth/presentation/auth_cubit/auth_state.dart';
-import 'package:dalel/features/auth/presentation/widgets/forgot_password.dart';
+import 'package:dalel/features/auth/presentation/widgets/forgot_password_widget.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import '../../../../core/functions/custom_toast.dart';
 import '../../../../core/functions/navigation.dart';
 import '../../../../core/utils/app_colors.dart';
@@ -43,14 +42,14 @@ class CustomSigninForm extends StatelessWidget {
                   labelText: AppStrings.password,obscureText: authCubit.isObscure,onChanged: (password){
                   authCubit.password = password;
                 },),
-                SizedBox(height: 16,),
-                ForgotPassword(),
+                const SizedBox(height: 16,),
+                const ForgotPasswordWidget(),
                 const SizedBox(height: 102,),
                 state is SigninLoadingState ? CircularProgressIndicator(color: AppColors.primaryColor,) :
                 CustomButton(
-                    text: AppStrings.signIn,onPressed: (){
+                    text: AppStrings.signIn,onPressed: ()async{
                     if(authCubit.signinFormKey.currentState!.validate()){
-                      authCubit.signInWithEmailAndPassword();
+                      await authCubit.signInWithEmailAndPassword();
                     }
                 }),
               ],
