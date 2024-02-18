@@ -19,7 +19,7 @@ class CustomSigninForm extends StatelessWidget {
     return BlocConsumer<AuthCubit,AuthState>(
       listener: (context,state){
         if(state is SigninSuccessState){
-          FirebaseAuth.instance.currentUser!.emailVerified?customReplacementNavigate(context, "/home"):
+          FirebaseAuth.instance.currentUser!.emailVerified?customReplacementNavigate(context, "/homeNavBar"):
           customToast("Please verify your account");
         }else if(state is SigninFailureState){
           customToast(state.errorMessage);

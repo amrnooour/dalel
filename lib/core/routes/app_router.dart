@@ -1,6 +1,7 @@
 import 'package:dalel/features/auth/presentation/auth_cubit/auth_cubit.dart';
 import 'package:dalel/features/auth/presentation/views/forgot_password_view.dart';
 import 'package:dalel/features/auth/presentation/views/sign_in_view.dart';
+import 'package:dalel/features/home/presentation/widgets/home_nav_bar_widget.dart';
 import 'package:dalel/features/splash/splash.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -27,12 +28,12 @@ final GoRouter router =GoRouter(routes: [
         create: (context) => AuthCubit(),
         child: const SignUpView()),
   ),
-  GoRoute(path: "/home",
-    builder: (context,state) => const HomeView(),
-  ),
   GoRoute(path: "/forgotPassword",
     builder: (context,state) => BlocProvider(
         create: (context) => AuthCubit(),
         child: const ForgotPasswordView()),
+  ),
+  GoRoute(path: "/homeNavBar",
+    builder: (context,state) => const HomeNavBarWidget(),
   ),
 ]);
