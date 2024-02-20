@@ -1,11 +1,13 @@
 import 'package:dalel/core/utils/app_assets.dart';
 import 'package:dalel/core/utils/app_text_styles.dart';
+import 'package:dalel/features/home/data/models/historical_characters_model.dart';
 import 'package:flutter/material.dart';
 import '../../../../core/utils/app_colors.dart';
 
 
 class CustomHomeItemListView extends StatelessWidget {
-  const CustomHomeItemListView({Key? key}) : super(key: key);
+  HistoricalCharactersModel model;
+  CustomHomeItemListView({Key? key,required this.model}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,11 +21,11 @@ class CustomHomeItemListView extends StatelessWidget {
         Container(
             height: 96,
             width: 74,
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(5),image: const DecorationImage(
-              image: AssetImage(AppAssets.test3),fit: BoxFit.fill
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(5),image:  DecorationImage(
+              image: NetworkImage(model.image),fit: BoxFit.fill
             )),),
         const SizedBox(height: 11,),
-        Text("Lionheart",style: CustomTextStyles.poppins500style14),
+        Text(model.name,style: CustomTextStyles.poppins500style14),
       ],),
     );
   }

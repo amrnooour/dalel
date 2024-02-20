@@ -21,6 +21,11 @@ abstract class AppAssets{
   static const String test2 = "assets/images/Frame2.png";
   static const String test3 = "assets/images/test3.png";
   static const String test4 = "assets/images/test4.png";
+  static const String warsLogo = "assets/images/Vector10.svg";
+  static const String pyramidsLogo = "assets/images/Pyramid.svg";
+  static const String cleopatraLogo = "assets/images/Cleopatra.svg";
+
+
 
 
 
