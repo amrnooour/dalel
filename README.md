@@ -1,16 +1,22 @@
-# dalel
+# 📘 Overview
 
-A new Flutter project.
+![d1](https://github.com/user-attachments/assets/167045e9-791b-4300-b89c-6a6cdb6bcd90)
 
-## Getting Started
+![d2](https://github.com/user-attachments/assets/20a3a62e-fb8b-411d-977c-051402190213)
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+## About this App
+
+It is a tourist guide to Egypt that contains tourist attractions and war battles that took place in
+Egypt
+
+## The technology used 
+
+• firebase auth,firebase firestore,firebase storage
+• bloc as a state managemaent
+• claen arc as a design arc
+
+
